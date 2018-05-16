@@ -1,0 +1,16 @@
+---
+layout: single
+title: '10g Migration Ramification Part 1: ORA-1426, Numeric Overflow'
+date: '2008-07-27T20:38:00.003-05:00'
+author: Bradd Piontek
+tags:
+- PL/SQL
+- upgrade
+- migration
+- oracle
+modified_time: '2008-07-27T21:16:38.903-05:00'
+blogger_id: tag:blogger.com,1999:blog-6356090992450002225.post-3286947763573745693
+blogger_orig_url: http://piontekdd.blogspot.com/2008/07/10g-migration-ramification-part-1-ora.html
+---
+
+Oracle 11g was released over a year ago, but lets face it, not everyone is running Oracle 10g, let alone 11g. July 31st marks the end of the 'free' Premier Support Oracle offered up to all Oracle 9.2.0.8 customers last summer. With that spirit in mind, I thought I would share some of my Oracle 10g Migration Ramifications. ('Upgrade' is a boring word and doesn't have a lot of words that rhyme with it. It is also a great homage to Adam Sandler's '<a href="http://en.wikipedia.org/wiki/Cajun_Man#Cajun_Man">Cajun Man</a>').<br /><br />In part 1, I will discuss an ORA-1426 you may encounter in PL/SQL code if you are using large literal integers and expecting a NUMBER type to hold it.<br /><br /><span style="font-weight: bold;">The code:</span><br /><pre><br />DECLARE<br />   lv_results NUMBER := 0;<br />BEGIN<br />   lv_results := 999999999 * 3;<br />END;<br />/<br /></pre><br /><span style="font-weight: bold;">Oracle 9i Results:</span><br /><pre><br />PL/SQL procedure successfully completed.<br /></pre><br /><span style="font-weight: bold;">Oracle 10g Results:</span><br /><pre><br />DECLARE<br />*<br />ERROR at line 1:<br />ORA-01426: numeric overflow<br />ORA-06512: at line 4<br /></pre><br /><br />I believe the 10g result is related to a change made in Oracle 10.1. There are various PL/SQL optimizations and new features added in Oracle 10g Release 1 and Release 2. Check out Metalink DocID: #311971.1 "New Features for Oracle10g PL/SQL 10.x" for a good list. I believe what we are seeing in the code above is an optimization made to the PL/SQL engine. In the example above, the PL/SQL engine is attemping to use an integer math engine to perform its calculations. This makes sense the math involves two integers. It would be faster to use integer math over floating-point.<br /><br />If we change the code slightly, we can force floating-point math and avoid the numeric overflow.<br /><br /><span style="font-weight: bold;">New Oracle 10g Code:</span><br /><pre><br />DECLARE<br />   lv_results NUMBER := 0;<br />BEGIN<br />   lv_results := 999999999 * 3.0;<br />END;<br />/<br /></pre><br /><br /><span style="font-weight: bold;">New Oracle 10g Results:</span><br /><pre><br />PL/SQL procedure successfully completed.<br /></pre><br /><br />You could also avoid the issue altogether by using variables of type NUMBER.<br /><br />The moral of the story with any database migration (or application change) is testing, testing, testing. Even the smoothest, most tested migration is going to come up with a few small issues (or one really big one). Even when you are armed with a list of all the new features, possible bugs etc, there are bound to be surprises for developers and dbas alike.<br /><br />Good luck with getting your 9i databases migrated (or 8i , or even, 8 and 7)

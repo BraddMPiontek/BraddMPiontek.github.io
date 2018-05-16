@@ -1,0 +1,16 @@
+---
+layout: single
+title: Rotate your Logs ... Two birds with one stone
+date: '2008-04-18T22:39:00.003-05:00'
+author: Bradd Piontek
+tags:
+- published reports
+- apache
+- oracle
+- grid control
+modified_time: '2008-04-18T22:56:44.344-05:00'
+blogger_id: tag:blogger.com,1999:blog-6356090992450002225.post-5674998569758759263
+blogger_orig_url: http://piontekdd.blogspot.com/2008/04/rotate-your-logs-two-birds-with-one.html
+---
+
+I have been struggling with getting a custom Grid Control (10g Release 3) report to a) Run on a schedule successfully and b) email it to me  for several weeks.  I spent my customary time troubleshooting the problem myself,  scouring metalink etc and finally resorted to opening an SR with Oracle Support. Two weeks later, and many "run opatch lsinventory -detail" or telling me to check my proxy settings (which I did on my own several times)  tasks later, still no resolution. I decided to shelve the problem and move on to more pressing matters...<br /><br />Enter the hand-off of the oncall pager to myself. I was informed that we were getting some late night pages from Grid Control regarding the HTTP_Server within the Oracle Management Station (OMS) itself. I had some free time (and my typical anal-retentive problem solving) and dove into the issue. I was fairly positive our 300 or so target Grid Control environment didn't currently have 10,000 active HTTP requests (and counting). I stumbled upon Metalink Document <span style="font-family:helvetica;"><strong>436690.1  </strong></span>which seemed like a perfect fit.  Apparently  the Apache requests handled by port 1159 are not on any sort of log rotation and the metrics get screwed up when the access_log reaches 2GB.  I performed a quick look  at the access_log and low and  behold, it was sitting at 2+GB.  A  quick change to the http_em.conf and  httpd_em.conf.template and cycle of the OMS was in completed. My cursory look at the metrics that were causing the pages looked awesome. No whacked out , increasing values.  Out of  nowhere, I started receiving emails of the custom, scheduled report from above.  It was very cool to see them working. A check of the scheduled report jobs, and they were now all succeeding.<br /><br />I'll wait until early next week to update the SR and close the SR with Oracle Support.  While they didn't really help me solve my problem and I did 99% of the troubleshooting myself, I did learn about the emdiag toolkit and found some interesting items in that log.<br /><br />Next challenge, to get a SQL Server plug-in deployed to a server through 2 firewalls. (Agent is already running with some interesting /etc/hosts work-arounds due to DNS limitations).<br /><span style="font-family:helvetica;"><strong></strong></span><span style="font-family:helvetica;"><strong></strong></span>
