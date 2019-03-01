@@ -18,7 +18,7 @@ locale                   : "en-US"
 title                    : "Prestidigitation of Bradd"
 title_separator          : "-"
 name                     : "Bradd Piontek"
-description              : "My So-Called DBA Life."
+description              : "My So-Called ex-DBA Life."
 url                      : "https://piontekdd.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -65,7 +65,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : google # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "UA-119138887-1" 
     anonymize_ip         : # true, false (default)
@@ -74,7 +74,7 @@ analytics:
 # Site Author
 author:
   name             : "Bradd Piontek"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/avatar.jpg"
   bio              : ""
   location         : "Sun Prairie, WI"
   email            : piontekdd@gmail.com
@@ -90,7 +90,7 @@ author:
   gitlab           :
   google_plus      :
   keybase          :
-  instagram        : criticalspins
+  instagram        : piontekdd
   lastfm           : piontekdd
   linkedin         : piontekdd # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
@@ -102,7 +102,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
+  youtube          : "https://www.youtube.com/user/piontekdd/"
 
 
 # Reading Files
