@@ -8,9 +8,9 @@ tags:
 - blogging
 - music
 - concerts
-modified_time: '2019-06-19T12:00:00.000-05:00'
+modified_time: '2020-04-16T12:00:00.000-05:00'
 ---
-## Why put this list together?
+## Why put this list together
 
 I've been wanting to put this list together for a while to document the concerts I've been to through the years. This list is intended to spark memories of all the good times I've had seeing live music, because let's be honest, after almost 30 years of concert-going it is easy to forget the details or forget entire shows altogether. It definitely helped that I saved as many ticket stubs as I possibly could; the oldest being my first Lenny Kravitz concert back in 1996. In more recent times, I've had to search through my Gmail "concert tickets" label as more and more shows want to do mobile ticketing. I'm still not certain this list is 100% complete as my wife, Sarah, reminded me of some opening acts that I had forgotten.
 
@@ -22,6 +22,10 @@ Leave a message in the comments below and tell me a band I HAVE to see before I'
 
 ## Without further ado ... the list
 
+* 2020-02-14
+  * [Joseph](https://thebandjoseph.com/) \| [Set List](https://www.setlist.fm/setlist/joseph/2020/majestic-theatre-madison-wi-5b982780.html)
+    * [Deep Sea Diver](https://www.thedeepseadiver.com/) \| [Set List](https://www.setlist.fm/setlist/deep-sea-diver/2020/majestic-theatre-madison-wi-4b987b82.html)
+  * [Majestic Theatre](http://majesticmadison.com/), Madison, WI
 * 2019-05-18
   * [Violent Femmes](http://vfemmes.com/) \| [Media:Blister In the Sun](https://www.youtube.com/watch?v=2p3l2Fw5GmU)
     * [The Whiskeybelles](https://whiskeybelles.com/home)
@@ -127,7 +131,7 @@ Leave a message in the comments below and tell me a band I HAVE to see before I'
     * [The Pukes](https://thepukessuck.bandcamp.com/)
   * [The Eagles Club](https://www.therave.com/main.asp), Milwaukee, WI
 * 2016-09-25
-  * [Chvrches](https://www.chvrch.es) \| [Set List](https://www.setlist.fm/setlist/chvrches/2016/riverside-theater-milwaukee-wi-13fde945.html) \| [Media: Leave A Trace](https://www.youtube.com/watch?v=MZFa-qDMgjY)
+  * [Chvrches](https://www.chvrch.es) \| [Set List](https://www.setlist.fm/setlist/chvrches/2016/riverside-theater-milwaukee-wi-13fde945.html) \| [Media: Empty Threat](https://youtu.be/V6Ceg5psAe4)
     * [Reyna](https://soundcloud.com/reynatheband)
   * [The Riverside Theater](https://pabsttheater.org/venue/the-riverside-theater/), Milwaukee, WI
 * 2016-08-20
