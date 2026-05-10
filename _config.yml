@@ -50,7 +50,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : BraddMPiontek
+  username               :
 facebook:
   username               :
   app_id                 :
@@ -77,7 +77,7 @@ author:
   avatar           : "/assets/images/avatar.jpg"
   bio              : ""
   location         : "Sun Prairie, WI"
-  email            : piontekdd@gmail.com
+  email            : bradd@piontek.io
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -98,7 +98,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : BraddMPiontek
+  twitter          :
   vine             :
   weibo            :
   xing             :
